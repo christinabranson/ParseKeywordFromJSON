@@ -1,0 +1,10 @@
+.idea/*
+output/*.csv
+!output/example_start.csv
+input/*.json
+!input/example1.json
+!input/example2.json
+
+
+venv
+.DS_Store

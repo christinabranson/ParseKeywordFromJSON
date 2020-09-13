@@ -1,0 +1,45 @@
+# Configuration file for running the script
+# See readme for details
+
+###################
+# REQUIRED VALUES #
+###################
+
+# IMPORT SETTINGS
+# Required!
+# Use either an absolute file path, ie "/home/user/LavaJsonParser/lava/*.json"
+# Or a file path relative to this project, ie "./lava/*.json"
+input_files: "./input/example*.json"
+
+# KEYWORD SETTINGS
+# Required!
+keyword: "start"
+
+# EXPORT SETTINGS
+# Required!
+# As with import, use either a relative file path or an absolute
+# Either set an exact filename or use {keyword} to automatically set the value
+# ie, if the keyword is "start" the output of "./output/{keyword}.json" will be "./output/start.json"
+output_file_path: "./output/"
+output_filename: "example_{keyword}.csv"
+
+###################
+# OPTIONAL VALUES #
+###################
+
+# SEARCH SETTINGS
+# Optional
+# If a search path is set, we'll only search within the defined path
+# Search path should be provided as comma separated values
+# If no search path is set, we will recursively search the entire JSON
+search_path: "segments,words"     # Will search within the designated path
+#search_path: ""                 # Will search the file globally
+
+#
+export_filename_as_col_header: True
+
+# NUMBER MANIPULATION SETTINGS
+# These will only be applied if the resulting value is a number type. Strings will be returned as is.
+use_multiplier: False
+multiplier: 100
+num_decimals: 0
